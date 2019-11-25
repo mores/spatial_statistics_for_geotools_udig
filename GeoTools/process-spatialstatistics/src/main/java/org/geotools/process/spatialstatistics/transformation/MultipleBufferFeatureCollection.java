@@ -17,7 +17,10 @@
 package org.geotools.process.spatialstatistics.transformation;
 
 import java.util.Arrays;
+import java.util.Collections;
+import java.util.List;
 import java.util.NoSuchElementException;
+import java.util.stream.Collectors;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
@@ -81,7 +84,7 @@ public class MultipleBufferFeatureCollection extends GXTSimpleFeatureCollection 
         // apply distance unit
         Arrays.sort(distances);
         
-        List<Double> reversedDist = Doubles.asList(distances);
+        List<Double> reversedDist = Arrays.stream(distances).boxed().collect(Collectors.toList());
         Collections.reverse(reversedDist);
         
         for (int i = 0; i < reversedDist.size(); i++) {

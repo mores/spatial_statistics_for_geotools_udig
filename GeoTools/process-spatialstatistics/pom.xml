@@ -17,7 +17,7 @@
   <packaging>jar</packaging>
   <name>Process Spatialstatistics</name>
   <description>Processes for spatial statistics.</description>
-  <version>21-SNAPSHOT</version>
+  <version>21.3</version>
   <url>https://github.com/MapPlus/spatial_statistics_for_geotools_udig</url>
   
   <licenses>
